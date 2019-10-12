@@ -1,0 +1,6 @@
+framework module Pods_tabbyTests {
+  umbrella header "Pods-tabbyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
