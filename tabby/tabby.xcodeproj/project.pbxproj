@@ -19,6 +19,10 @@
 		223BC4862350F2C000AFF5A9 /* tabbyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BC4852350F2C000AFF5A9 /* tabbyUITests.swift */; };
 		223BC4942350F93C00AFF5A9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BC4932350F93C00AFF5A9 /* RoundButton.swift */; };
 		2244BF822351D52B0011917A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244BF812351D52B0011917A /* Status.swift */; };
+		2268387623528A7A00940314 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268387523528A7A00940314 /* RootViewController.swift */; };
+		22A21883235277D0002D4C20 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A21882235277D0002D4C20 /* SignUpViewController.swift */; };
+		22A21885235277DE002D4C20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A21884235277DE002D4C20 /* LoginViewController.swift */; };
+		22A2188723528373002D4C20 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2188623528373002D4C20 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		223BC4872350F2C000AFF5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223BC4932350F93C00AFF5A9 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		2244BF812351D52B0011917A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		2268387523528A7A00940314 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		22A21882235277D0002D4C20 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		22A21884235277DE002D4C20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22A2188623528373002D4C20 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,15 +117,14 @@
 			children = (
 				223BC4612350F2BF00AFF5A9 /* AppDelegate.swift */,
 				223BC4632350F2BF00AFF5A9 /* SceneDelegate.swift */,
-				223BC4652350F2BF00AFF5A9 /* FirstViewController.swift */,
-				223BC4672350F2BF00AFF5A9 /* SecondViewController.swift */,
+				22A21888235283C3002D4C20 /* Helpers */,
+				22A21881235276FF002D4C20 /* View Controllers */,
 				223BC4692350F2BF00AFF5A9 /* Main.storyboard */,
 				223BC46C2350F2C000AFF5A9 /* Assets.xcassets */,
 				223BC46E2350F2C000AFF5A9 /* LaunchScreen.storyboard */,
 				223BC4712350F2C000AFF5A9 /* Info.plist */,
 				223BC4932350F93C00AFF5A9 /* RoundButton.swift */,
 				2244BF812351D52B0011917A /* Status.swift */,
-				2235BE812351E111009028EA /* UserListController.swift */,
 			);
 			path = tabby;
 			sourceTree = "<group>";
@@ -138,6 +145,27 @@
 				223BC4872350F2C000AFF5A9 /* Info.plist */,
 			);
 			path = tabbyUITests;
+			sourceTree = "<group>";
+		};
+		22A21881235276FF002D4C20 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				223BC4652350F2BF00AFF5A9 /* FirstViewController.swift */,
+				223BC4672350F2BF00AFF5A9 /* SecondViewController.swift */,
+				2235BE812351E111009028EA /* UserListController.swift */,
+				22A21882235277D0002D4C20 /* SignUpViewController.swift */,
+				22A21884235277DE002D4C20 /* LoginViewController.swift */,
+				2268387523528A7A00940314 /* RootViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		22A21888235283C3002D4C20 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				22A2188623528373002D4C20 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,12 +299,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A21885235277DE002D4C20 /* LoginViewController.swift in Sources */,
 				223BC4682350F2BF00AFF5A9 /* SecondViewController.swift in Sources */,
 				2235BE822351E111009028EA /* UserListController.swift in Sources */,
+				2268387623528A7A00940314 /* RootViewController.swift in Sources */,
+				22A21883235277D0002D4C20 /* SignUpViewController.swift in Sources */,
 				223BC4942350F93C00AFF5A9 /* RoundButton.swift in Sources */,
 				223BC4662350F2BF00AFF5A9 /* FirstViewController.swift in Sources */,
 				223BC4622350F2BF00AFF5A9 /* AppDelegate.swift in Sources */,
 				223BC4642350F2BF00AFF5A9 /* SceneDelegate.swift in Sources */,
+				22A2188723528373002D4C20 /* Utilities.swift in Sources */,
 				2244BF822351D52B0011917A /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
