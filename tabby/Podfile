@@ -8,6 +8,8 @@ target 'tabby' do
   # Pods for tabby
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Core'
+	pod 'Firebase/Firestore'
 
   target 'tabbyTests' do
     inherit! :search_paths

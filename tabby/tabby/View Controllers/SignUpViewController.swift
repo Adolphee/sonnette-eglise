@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -18,7 +20,40 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBAction func signUpEvent(_ sender: UIButton) {
+        // Validation
+        let error = validateFields()
+        
+        if error != nil {
+            showError(error!)
+        } else {
+            // Persistence
+            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: { (res, err) in
+                if err != nil {
+                    self.showError("Error creating user.")
+                }
+            })
+            // Segue to homescreen
+        }
     }
+    
+    func showError(_ message: String){
+        errorMessageLabel.text = message
+        errorMessageLabel.alpha = 1
+    }
+    
+    func validateFields() -> String? {
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all fields."
+        }
+        
+        let cleanPass = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !Utilities.isPasswordValid(cleanPass!) {
+           return "please make sure your password contains at least 8 characters contains at least a special character and a number."
+        }
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
