@@ -623,7 +623,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADCD47EDD7AFC94AB3E63C6E /* Pods-tabby.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Splashbackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG9577QP7Z;
 				INFOPLIST_FILE = tabby/Info.plist;
@@ -642,7 +642,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1003738CC5B0A507AF8897B /* Pods-tabby.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Splashbackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG9577QP7Z;
 				INFOPLIST_FILE = tabby/Info.plist;

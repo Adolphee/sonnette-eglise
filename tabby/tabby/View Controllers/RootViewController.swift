@@ -20,6 +20,9 @@ class RootViewController: UIViewController {
         loginButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         loginButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        self.navigationController?.overrideUserInterfaceStyle = .light
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
            return .lightContent
