@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseCore
 
 class SignUpViewController: UIViewController {
 
@@ -26,13 +27,28 @@ class SignUpViewController: UIViewController {
         if error != nil {
             showError(error!)
         } else {
-            // Persistence
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: { (res, err) in
+            
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            Auth.auth().createUser(withEmail: email, password: password, completion: { (res, err) in
                 if err != nil {
                     self.showError("Error creating user.")
+                } else {
+                    let db = Firestore.firestore() // Open conn to Firebase database
+                    db.collection("users").addDocument(data: [ // Add new documeent to coll "users"
+                        "firstName": firstName,
+                        "lastName": lastName,
+                        "uid": res!.user.uid
+                    ]) { (error) in if error != nil {
+                        self.showError("Error saving user data.")
+                        }
+                    }
                 }
             })
             // Segue to homescreen
+            transitionToHomeScreen()
         }
     }
     
@@ -42,7 +58,7 @@ class SignUpViewController: UIViewController {
     }
     
     func validateFields() -> String? {
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        if  firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
             return "Please fill in all fields."
         }
@@ -68,6 +84,12 @@ class SignUpViewController: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(signUpButton)
+    }
+    
+    func transitionToHomeScreen(){
+        let  homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? UITabBarController
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     /*
     // MARK: - Navigation
