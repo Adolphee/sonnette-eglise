@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>4501631681-tkdhfbed22q7b1cgu0cotm3gjjktlrvd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.4501631681-tkdhfbed22q7b1cgu0cotm3gjjktlrvd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAK_x2RUgbb6ifauV_huaMLwXQwFh71nxQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>4501631681</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>AMKB.tabby</string>
+	<key>PROJECT_ID</key>
+	<string>sonnette-eglise</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sonnette-eglise.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:4501631681:ios:113fb76dd9d6be0d725a40</string>
+	<key>DATABASE_URL</key>
+	<string>https://sonnette-eglise.firebaseio.com</string>
+</dict>
+</plist>
