@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 import FirebaseCore
 
+// TODO: storyboard segues of type CUTSOM --> activqte programmatically --> navigation fix
+
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextField: UITextField!
