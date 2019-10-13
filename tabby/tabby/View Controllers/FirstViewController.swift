@@ -16,6 +16,10 @@ class FirstViewController: UIViewController {
     
     @IBAction func statusChange(_ sender: UIButton) {
         status.index += (status.index < 3 ? 1 : -3)
+        
+        // TODO: Update status in Firebase
+        // TODO: Notify other users
+        
         updateStatusButton()
     }
     
@@ -26,7 +30,6 @@ class FirstViewController: UIViewController {
         statusBtn.borderWidth = 5
         statusBtn.cornerRadius = 75
         statusBtn.borderColor = .white
-        
         self.view.addBackground(withBlur: true)
         updateStatusButton()
     }

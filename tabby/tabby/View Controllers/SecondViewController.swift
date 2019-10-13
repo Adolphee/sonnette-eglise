@@ -9,6 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    // TODO: On Click popup: SMS or ... ?
+    
+    // TODO: if SMS --> sms-application opens with person's phone number dialed
+    
+    //
 
     override func viewDidLoad() {
         super.viewDidLoad()
