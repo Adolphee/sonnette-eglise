@@ -10,9 +10,8 @@
         <!--Navigation Controller-->
         <scene sceneID="KSF-Q8-OYO">
             <objects>
-                <navigationController id="xcG-Vt-PQH" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="xcG-Vt-PQH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E6L-w2-lUu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-hB-ctU">
-                                <rect key="frame" x="40" y="700" width="334" height="122"/>
+                                <rect key="frame" x="40" y="387" width="334" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRQ-x0-qab">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -59,9 +58,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="h9L-HB-xnJ" firstAttribute="bottom" secondItem="5fD-hB-ctU" secondAttribute="bottom" constant="353" id="6L8-wv-Lsh"/>
+                            <constraint firstItem="5fD-hB-ctU" firstAttribute="leading" secondItem="h9L-HB-xnJ" secondAttribute="leading" constant="40" id="9Ba-3G-LYE"/>
+                            <constraint firstItem="h9L-HB-xnJ" firstAttribute="trailing" secondItem="5fD-hB-ctU" secondAttribute="trailing" constant="40" id="Pym-O6-kOq"/>
                             <constraint firstItem="h9L-HB-xnJ" firstAttribute="trailing" secondItem="5fD-hB-ctU" secondAttribute="trailing" constant="40" id="ZyS-nw-T1p"/>
                             <constraint firstItem="5fD-hB-ctU" firstAttribute="leading" secondItem="h9L-HB-xnJ" secondAttribute="leading" constant="40" id="ko9-qL-BUh"/>
-                            <constraint firstItem="h9L-HB-xnJ" firstAttribute="bottom" secondItem="5fD-hB-ctU" secondAttribute="bottom" constant="40" id="oGG-vj-hrX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h9L-HB-xnJ"/>
                     </view>
@@ -312,7 +313,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController interfaceStyle="light" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeVC" interfaceStyle="light" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
@@ -339,7 +340,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-3e-QIv">
-                                <rect key="frame" x="40" y="128" width="334" height="410"/>
+                                <rect key="frame" x="40" y="84" width="334" height="410"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyY-sY-Vxl">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -418,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-Bq-e4G">
-                                <rect key="frame" x="40" y="128" width="334" height="266"/>
+                                <rect key="frame" x="40" y="84" width="334" height="266"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F42-Ss-Khc">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -441,7 +442,7 @@
                                             <action selector="loginEvent:" destination="Uze-L4-EQp" eventType="touchUpInside" id="vd8-mn-IXe"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-Mm-gDW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-Mm-gDW">
                                         <rect key="frame" x="0.0" y="216" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

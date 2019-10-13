@@ -15,9 +15,15 @@ class RootViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground(withBlur: true)
         setUpElements()
-        // Do any additional setup after loading the view.
+        loginButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        loginButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+           return .lightContent
+       }
     
     func setUpElements(){
         Utilities.styleFilledButton(signUpButton)

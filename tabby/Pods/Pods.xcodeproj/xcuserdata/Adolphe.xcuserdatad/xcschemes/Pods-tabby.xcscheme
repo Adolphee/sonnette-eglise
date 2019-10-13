@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02A57DD698FE7BD737296F7B9C3FFE45"
+               BlueprintIdentifier = "A1C672681F7B666B3BA3762051ABEECF"
                BuildableName = "Pods_tabby.framework"
                BlueprintName = "Pods-tabby"
                ReferencedContainer = "container:Pods.xcodeproj">
