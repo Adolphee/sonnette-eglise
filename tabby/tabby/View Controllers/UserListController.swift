@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 struct TrueState {
     var icon: String
@@ -55,10 +56,44 @@ class UserListController: UITableViewController {
         Card(title: "Ward", icon: State().absent),
         Card(title: "John", icon: State().absent),
         ]
+    var users: [User]? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    func calculateTrueState(from status: String) -> TrueState{
+        switch status {
+            case "AVAILABLE":
+                return State().available
+            case "BUSY":
+                return State().busy
+            case "ONLINE":
+                return State().online
+        default:
+            return State().absent
+        }
+    }
+    
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let db = Firestore.firestore()
+        var headlines = [Card]()
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let user = document.data()
+                    headlines.append(Card(title: "\(String(describing: user["firstName"])) \(String(describing: user["lastName"]))", icon: self.calculateTrueState(from: user["status"] as! String)))
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
         return headlines.count
     }
 
